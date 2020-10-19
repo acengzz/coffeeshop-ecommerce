@@ -13,12 +13,12 @@
 
 const mongoose =require('mongoose');
 const dotenv = require('dotenv');
-const users = require('./data/users');
-const products = require("./data/products");
-const User = require("./models/UserModel");
-const Product = require("./models/ProductModel");
-const Order = require("./models/OrderModel");
-const connectDB = require('./config/DB');
+const users = require('../data/users');
+const products = require("../data/products");
+const User = require("../models/UserModel");
+const Product = require("../models/ProductModel");
+const Order = require("../models/OrderModel");
+const connectDB = require('../config/DB');
 
 dotenv.config();
 connectDB();

@@ -6,8 +6,10 @@ import { motion } from 'framer-motion'
 import { Container } from 'react-bootstrap'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+
 import Homepage from './pages/Homepage'
 import ProductDetails from './pages/ProductDetails'
+import CartPage from './pages/CartPage'
 
 const App = () => {
 	return (
@@ -15,12 +17,11 @@ const App = () => {
 			<Router>
 				<Header />
 				<motion.main
-					initial={{ y: -500 }}
-					animate={{ y: 0 }}
 					className="py-3">
 					<Container>
 						<Route exact path="/" component={Homepage} />
 						<Route exact path="/product/:id" component={ProductDetails} />
+						<Route exact path="/cart/:id?" component={CartPage} />
 					</Container>
 				</motion.main>
 				<Footer />
